@@ -39,7 +39,6 @@ thead th {
 }
 
 table {
-    outline: 1px solid rgb(120, 120, 120);
     width: max-content;
     text-align: center;
     border-spacing: 0;
