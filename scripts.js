@@ -5,35 +5,52 @@ const statusListElement = document.getElementById("status-list");
 
 let date;
 
-const green = "#33e061";
-const darkGreen = "#008223";
+const green = "#26ac4a";
+const darkGreen = "#006c1d";
 
 
 const jk = {
     name: "Jorkin",
     program: "A-Level",
     schedule: [
-        [["CS", "NS-C2-4"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], [], [], [], [], [], [], [], [], ["Physics", "NS-C2-1"], ["Physics", "NS-C2-1"], ["Math", "NS-C2-1"], ["Math", "NS-C2-1"], ["FM", "NS-C2-1"], ["FM", "NS-C2-1"], [], []],
-        [[], [], [], [], ["Math", "NS-C2-3"], ["Math", "NS-C2-3"], ["Physics", "NS-C2-3"], ["Physics", "NS-C2-3"], ["Math", "NS-C2-4"], ["Math", "NS-C2-4"], [], [], [], [], ["FM", "NE-5-9"], ["FM", "NE-5-9"], ["FM", "NE-5-9"], ["FM", "NE-5-9"], [], []],
-        [[], [], [], [], ["Physics", "NS-C2-3"], ["Physics", "NS-C2-3"], [], [], [], [], ["Math", "NW-4-21"], ["Math", "NW-4-21"], ["FM", "NC-2-30"], ["FM", "NC-2-30"], ["CS", "NS-C2-3"], ["CS", "NS-C2-3"], [], [], [], []],
-        [[], [], [], [], ["FM", "NE-2-13"], ["FM", "NE-2-13"], ["Physics", "NS-C3-1"], ["Physics", "NS-C3-1"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], [], [], ["FM", "NS-C2-1"], ["FM", "NS-C2-1"], ["Math", "NS-C2-2"], ["Math", "NS-C2-2"], [], [], [], []],
-        [["Math", "UW-8-4"], ["Math", "UW-8-4"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], [], [], [], [], ["Physics", "PHY 2"], ["Physics", "PHY 2"], ["Physics", "PHY 2"], ["Physics", "PHY 2"], [], [], [], [], [], []]
+        [["CS", "NS-C2-4"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], [], [], [], [], [], [], [], [], ["Physics", "NS-C2-1"], ["Physics", "NS-C2-1"], ["Maths", "NS-C2-1"], ["Maths", "NS-C2-1"], ["FM", "NS-C2-1"], ["FM", "NS-C2-1"], [], []],
+        [[], [], [], [], ["Maths", "NS-C2-3"], ["Maths", "NS-C2-3"], ["Physics", "NS-C2-3"], ["Physics", "NS-C2-3"], ["Maths", "NS-C2-4"], ["Maths", "NS-C2-4"], [], [], [], [], ["FM", "NE-5-9"], ["FM", "NE-5-9"], ["FM", "NE-5-9"], ["FM", "NE-5-9"], [], []],
+        [[], [], [], [], ["Physics", "NS-C2-3"], ["Physics", "NS-C2-3"], [], [], [], [], ["Maths", "NW-4-21"], ["Maths", "NW-4-21"], ["FM", "NC-2-30"], ["FM", "NC-2-30"], ["CS", "NS-C2-3"], ["CS", "NS-C2-3"], [], [], [], []],
+        [[], [], [], [], ["FM", "NE-2-13"], ["FM", "NE-2-13"], ["Physics", "NS-C3-1"], ["Physics", "NS-C3-1"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], [], [], ["FM", "NS-C2-1"], ["FM", "NS-C2-1"], ["Maths", "NS-C2-2"], ["Maths", "NS-C2-2"], [], [], [], []],
+        [["Maths", "UW-8-4"], ["Maths", "UW-8-4"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], [], [], [], [], ["Physics", "PHY 2"], ["Physics", "PHY 2"], ["Physics", "PHY 2"], ["Physics", "PHY 2"], [], [], [], [], [], []]
     ],
     color: "#371362"
 };
 
 const rt = {
-    name: "Jorkin",
+    name: "ragep33p",
     program: "A-Level",
     schedule: [
-        [["CS", "NS-C2-4"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], [], [], [], [], [], [], [], [], ["Physics", "NS-C2-1"], ["Physics", "NS-C2-1"], ["Math", "NS-C2-1"], ["Math", "NS-C2-1"], ["FM", "NS-C2-1"], ["FM", "NS-C2-1"], [], []],
-        [[], [], [], [], ["Math", "NS-C2-3"], ["Math", "NS-C2-3"], ["Physics", "NS-C2-3"], ["Physics", "NS-C2-3"], ["Math", "NS-C2-4"], ["Math", "NS-C2-4"], [], [], [], [], ["FM", "NE-5-9"], ["FM", "NE-5-9"], ["FM", "NE-5-9"], ["FM", "NE-5-9"], [], []],
-        [[], [], [], [], ["Physics", "NS-C2-3"], ["Physics", "NS-C2-3"], [], [], [], [], ["Math", "NW-4-21"], ["Math", "NW-4-21"], ["FM", "NC-2-30"], ["FM", "NC-2-30"], ["CS", "NS-C2-3"], ["CS", "NS-C2-3"], [], [], [], []],
-        [[], [], [], [], ["FM", "NE-2-13"], ["FM", "NE-2-13"], ["Physics", "NS-C3-1"], ["Physics", "NS-C3-1"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], [], [], ["FM", "NS-C2-1"], ["FM", "NS-C2-1"], ["Math", "NS-C2-2"], ["Math", "NS-C2-2"], [], [], [], []],
-        [["Math", "UW-8-4"], ["Math", "UW-8-4"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], [], [], [], [], ["Physics", "PHY 2"], ["Physics", "PHY 2"], ["Physics", "PHY 2"], ["Physics", "PHY 2"], [], [], [], [], [], []]
+        [[], [], [], [], ["Physics", ""], ["Physics", ""], [], [], ["Econs", ""], ["Econs", ""], ["Econs", ""], ["Econs", ""], ["Maths", ""], ["Maths", ""], ["FM", ""], ["FM", ""], [], [], [], []],
+        [["Econs", ""], ["Econs", ""], ["Econs", ""], ["Econs", ""], ["FM", ""], ["FM", ""], ["FM", ""], ["FM", ""], [], [], ["Maths", ""], ["Maths", ""], [], [], [], [], ["Physics", ""], ["Physics", ""], [], []],
+        [["FM", ""], ["FM", ""], ["FM", ""], ["FM", ""], [], [], ["Physics", ""], ["Physics", ""], ["Physics", ""], ["Physics", ""], [], [], [], [], [], [], ["Maths", ""], ["Maths", ""], [], []],
+        [[], [], ["Maths", ""], ["Maths", ""], [], [], ["FM", ""], ["FM", ""], [], [], ["Econs", ""], ["Econs", ""], [], [], ["Physics", ""], ["Physics", ""], [], [], [], []],
+        [["Maths", ""], ["Maths", ""], [], [], [], [], ["Maths", ""], ["Maths", ""], [], [], [], [], [], ["Econs", ""], ["Econs", ""], ["Physics", ""], ["Physics", ""], [], [], []],
+            
     ],
     color: "#134862"
 };
+
+const dsdsa = {
+    name: "ragep33p",
+    program: "A-Level",
+    schedule: [
+        [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+        [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+        [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+        [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+        [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+            
+    ],
+    color: "#134862"
+};
+
+
 
 const memberArray = [jk, rt];
 
@@ -46,7 +63,7 @@ function highlightCurrentDayTime() {
     
     let timeRow = timetableElement.rows[0];
 
-    let periodIndex = 5;
+    let periodIndex;
 
     for (let i = 1; i < timeRow.cells.length; i++) {
         let hourMinute = timeRow.cells[i].textContent.split(":");
@@ -128,12 +145,14 @@ function memberStatus(timeInfo) {
 
         let currentStatus = "Not Free";
 
-        if (schedule[timeInfo.currentDay][timeInfo.periodIndex - 1].length === 0) {
-            currentStatus = "FREE";
-            statusDiv.style.color = green;
-        }        
-        
-        statusDiv.appendChild(document.createTextNode(member.name + ": " + currentStatus))
+        try {
+            if (schedule[timeInfo.currentDay - 1][timeInfo.periodIndex - 1].length === 0) {
+                currentStatus = "FREE";
+                statusDiv.style.color = green;
+            }        
+        } catch (error) {}
+
+        statusDiv.appendChild(document.createTextNode("(" + member.program + ") " + member.name + " - " + currentStatus));
 
         statusListElement.appendChild(statusDiv);
     }
@@ -146,8 +165,9 @@ function update() {
 
         let currentHours = date.getHours();
         let currentMinutes = date.getMinutes();
+        let currentSeconds = date.getSeconds();
         
-        currentTimeHeading.textContent = currentHours + ":" + currentMinutes.toString().padStart(2, "0");
+        currentTimeHeading.textContent = currentHours + ":" + currentMinutes.toString().padStart(2, "0") + ":" + currentSeconds.toString().padStart(2, "0");
 
         memberStatus(highlightCurrentDayTime());
 
@@ -162,8 +182,9 @@ window.addEventListener("load", (event) => {
 
     let currentHours = date.getHours();
     let currentMinutes = date.getMinutes();
+    let currentSeconds = date.getSeconds();
     
-    currentTimeHeading.textContent = currentHours + ":" + currentMinutes.toString().padStart(2, "0");
+    currentTimeHeading.textContent = currentHours + ":" + currentMinutes.toString().padStart(2, "0") + ":" + currentSeconds.toString().padStart(2, "0");
 
     console.log("Time is loaded.");
 
