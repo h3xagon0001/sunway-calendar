@@ -36,6 +36,20 @@ const rt = {
     color: "#134862"
 };
 
+const cc = {
+    name: "Caleb",
+    program: "FIST",
+    schedule: [
+        [[], [], [], [], [], ["BCC", ""], ["BCC", ""], ["BCC", ""], ["BCC", ""], [], [], [], [], [], ["Bio", ""], ["Bio", ""], ["Bio", ""], ["Bio", ""], [], []],
+        [[], ["Maths", ""], ["Maths", ""], ["Maths", ""], ["Maths", ""], ["Bio", ""], ["Bio", ""], ["Bio", ""], ["Bio", ""], [], ["ICT", ""], ["ICT", ""], ["ICT", ""], ["ICT", ""], [], [], [], [], [], []],
+        [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+        [[], [], [], [], [], ["Maths", ""], ["Maths", ""], ["Maths", ""], ["Maths", ""], [], ["BCC", ""], ["BCC", ""], ["BCC", ""], ["BCC", ""], [], [], [], [], [], []],
+        [[], [], [], [], [], [], [], [], [], [], ["ICT", ""], ["ICT", ""], ["ICT", ""], ["ICT", ""], [], [], ["Bio", ""], ["Bio", ""], [], []],
+            
+    ],
+    color: "#621313"
+};
+
 const dsdsa = {
     name: "ragep33p",
     program: "A-Level",
@@ -52,7 +66,7 @@ const dsdsa = {
 
 
 
-const memberArray = [jk, rt];
+const memberArray = [jk, rt, cc];
 
 function highlightCurrentDayTime() {
     date = new Date();
