@@ -5,8 +5,8 @@ const statusListElement = document.getElementById("status-list");
 
 let date;
 
-const green = "#26ac4a";
-const darkGreen = "#006c1d";
+const red = "#8b232c";
+const green = "#6fb560";
 
 
 const jk = {
@@ -19,7 +19,7 @@ const jk = {
         [[], [], [], [], ["FM", "NE-2-13"], ["FM", "NE-2-13"], ["Physics", "NS-C3-1"], ["Physics", "NS-C3-1"], ["CS", "NS-C2-4"], ["CS", "NS-C2-4"], [], [], ["FM", "NS-C2-1"], ["FM", "NS-C2-1"], ["Maths", "NS-C2-2"], ["Maths", "NS-C2-2"], [], [], [], []],
         [["Maths", "UW-8-4"], ["Maths", "UW-8-4"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], ["CS", "UW-8-1"], [], [], [], [], ["Physics", "PHY 2"], ["Physics", "PHY 2"], ["Physics", "PHY 2"], ["Physics", "PHY 2"], [], [], [], [], [], []]
     ],
-    color: "#371362"
+    color: "#a2efd2"
 };
 
 const rt = {
@@ -33,7 +33,7 @@ const rt = {
         [["Maths", ""], ["Maths", ""], [], [], [], [], ["Maths", ""], ["Maths", ""], [], [], [], [], [], ["Econs", ""], ["Econs", ""], ["Physics", ""], ["Physics", ""], [], [], []],
             
     ],
-    color: "#134862"
+    color: "#d29038"
 };
 
 const cc = {
@@ -47,7 +47,35 @@ const cc = {
         [[], [], [], [], [], [], [], [], [], [], ["ICT", ""], ["ICT", ""], ["ICT", ""], ["ICT", ""], [], [], ["Bio", ""], ["Bio", ""], [], []],
             
     ],
-    color: "#621313"
+    color: "#ac4998"
+};
+
+const jm = {
+    name: "Jon",
+    program: "MUFY",
+    schedule: [
+        [["Chemistry", "Chem Lab"], ["Chemistry", "Chem Lab"], ["Physics", "Physics Lab "], ["Physics", "Physics Lab "], ["Physics", "Physics Lab "], [], [], [], [], [], ["English", "UC 5-5"], ["English", "UC 5-5"], ["English", "UC 5-5"], [], [], [], [], [], [], []],
+        [[], [], ["Physics", "GC FR 5"], ["Physics", "GC FR 5"], ["Physics", "GC FR 5"], [], [], [], [], [], ["English", "UC 5-6"], ["English", "UC 5-6"], ["English", "UC 5-6"], ["Maths", "NE 3-6"], ["Maths", "NE 3-6"], ["Maths", "NE 3-6"], [], [], [], []],
+        [["Chemistry", "SE 4-14"], ["Chemistry", "SE 4-14"], [], [], [], [], [], [], [], [], [], [], ["Maths", "NW-CL 2-3"], ["Maths", "NW-CL 2-3"], ["Maths", "NW-CL 2-3"], ["Maths", "NW-CL 2-3"], [], [], [], []],
+        [["Chemistry", "NE 3-6"], ["Chemistry", "NE 3-6"], ["Physics", "GC FR 5"], ["Physics", "GC FR 5"], ["Physics", "GC FR 5"], [], [], [], [], [], ["English", "NW 4-19"], ["English", "NW 4-19"], ["English", "NW 4-19"], ["Maths", "NW-CL 2-1"], ["Maths", "NW-CL 2-1"], ["Maths", "NW-CL 2-1"], [], [], [], []],
+        [["Chemistry", "NE-TR 2-15"], ["Chemistry", "NE-TR 2-15"], ["Physics", "GC FR 5"], ["Physics", "GC FR 5"], ["Physics", "GC FR 5"], [], [], [], [], [], ["English", "NW UC 5-6"], ["English", "NW UC 5-6"], ["English", "UC 5-6"], ["Maths", "NW-CL 2-1"], ["Maths", "NW-CL 2-1"], ["Maths", "NW-CL 2-1"], [], [], [], []],
+            
+    ],
+    color: "#6fb560"
+};
+
+const nn = {
+    name: "Nat",
+    program: "CIMP",
+    schedule: [
+        [["CIMP", ""], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], [], [], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], [], [], [], [], [], [], [], []],
+        [["CIMP", ""], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], [], [], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], [], [], [], [], [], [], [], []],
+        [["CIMP", ""], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], [], [], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], [], [], [], [], [], [], [], []],
+        [["CIMP", ""], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], [], [], ["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], [], [], [], [], [], [], [], []],
+        [["CIMP", ""], ["CIMP", ""], ["CIMP", ""], [], ["CIMP", ""], ["CIMP", ""], [], [], [], [], [], [], [], [], [], [], [], [], [], []],
+            
+    ],
+    color: "#d75e40"
 };
 
 const dsdsa = {
@@ -66,7 +94,7 @@ const dsdsa = {
 
 
 
-const memberArray = [jk, rt, cc];
+const memberArray = [jk, rt, cc, jm, nn];
 
 function highlightCurrentDayTime() {
     date = new Date();
@@ -105,18 +133,18 @@ function highlightCurrentDayTime() {
         let row = timetableElement.rows[i];
 
         for (let j = 1; j < row.cells.length; j++) {
-            row.cells[j].style.backgroundColor = "#1e1e1e";
+            row.cells[j].style.backgroundColor = "#394a50";
 
             if (j === periodIndex) {
-                row.cells[j].style.backgroundColor = darkGreen;
+                row.cells[j].style.backgroundColor = "#557074";
             }
 
             if (i === currentDay && currentDay != 0) {
-                row.cells[j].style.backgroundColor = darkGreen;
+                row.cells[j].style.backgroundColor = "#557074";
             }
 
             if (j === periodIndex && i === currentDay && currentDay != 0) {
-                row.cells[j].style.backgroundColor = green;
+                row.cells[j].style.backgroundColor = "#557074";
             }
         }
     }
@@ -139,6 +167,11 @@ function loadSchedule() {
                     newPeriod.classList.add("period-block");
                     newPeriod.style.backgroundColor = member.color;
 
+                    if (member.color == "#a2efd2") {
+                        newPeriod.style.color = "#202e37";
+                    }
+
+
                     newPeriod.appendChild(document.createTextNode(member.name + " | " + currentPeriod[0]));
                     newPeriod.appendChild(document.createElement("br"));
                     newPeriod.appendChild(document.createTextNode(currentPeriod[1]));
@@ -159,6 +192,7 @@ function memberStatus(timeInfo) {
 
 
         let currentStatus = "Not Free";
+        statusDiv.style.color = red;
 
         try {
             if (schedule[timeInfo.currentDay - 1][timeInfo.periodIndex - 1].length === 0) {
