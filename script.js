@@ -87,12 +87,13 @@ function highlightCurrentDayTime() {
         }
     }
 
-    for (let i = 0; i < timetableElement.rows.length; i++) {
+    for (let i = 1; i < timetableElement.rows.length; i++) {
         let row = timetableElement.rows[i];
 
-        for (let j = 0; j < row.cells.length; j++) {
+        for (let j = 1; j < row.cells.length; j++) {
+            row.cells[j].style.backgroundColor = "#1e1e1e";
+
             if (j === periodIndex) {
-                row.cells[j].style.backgroundColor = "";
                 row.cells[j].style.backgroundColor = darkGreen;
             }
 
