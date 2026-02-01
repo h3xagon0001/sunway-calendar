@@ -108,7 +108,7 @@ function highlightCurrentDayTime() {
     let periodIndex;
 
     for (let i = 1; i < timeRow.cells.length; i++) {
-        let hourMinute = timeRow.cells[i].textContent.split(":");
+        let hourMinute = timeRow.cells[i].id.split(":");
         let periodHour = parseInt(hourMinute[0]);
         let periodMinute = parseInt(hourMinute[1]);
 
