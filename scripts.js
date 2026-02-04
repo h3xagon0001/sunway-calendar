@@ -51,7 +51,7 @@ const cc = {
 };
 
 const jm = {
-    name: "Jon",
+    name: "Joseph",
     program: "MUFY",
     schedule: [
         [["Chemistry", "Chem Lab"], ["Chemistry", "Chem Lab"], ["Physics", "Physics Lab "], ["Physics", "Physics Lab "], ["Physics", "Physics Lab "], [], [], [], [], [], ["English", "UC 5-5"], ["English", "UC 5-5"], ["English", "UC 5-5"], [], [], [], [], [], [], []],
